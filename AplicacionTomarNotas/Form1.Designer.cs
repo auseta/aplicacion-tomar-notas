@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dtGridTabla = new DataGridView();
             txtTitulo = new TextBox();
             txtMensaje = new TextBox();
             label1 = new Label();
@@ -37,17 +37,17 @@
             btnGuardar = new Button();
             btnLeer = new Button();
             btnBorrar = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dtGridTabla).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dtGridTabla
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(409, 44);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(250, 297);
-            dataGridView1.TabIndex = 0;
+            dtGridTabla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtGridTabla.Location = new Point(409, 44);
+            dtGridTabla.Name = "dtGridTabla";
+            dtGridTabla.RowTemplate.Height = 25;
+            dtGridTabla.Size = new Size(250, 297);
+            dtGridTabla.TabIndex = 0;
             // 
             // txtTitulo
             // 
@@ -102,6 +102,7 @@
             btnGuardar.TabIndex = 6;
             btnGuardar.Text = "Guardar";
             btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // btnLeer
             // 
@@ -112,6 +113,7 @@
             btnLeer.TabIndex = 7;
             btnLeer.Text = "Leer";
             btnLeer.UseVisualStyleBackColor = true;
+            btnLeer.Click += btnLeer_Click;
             // 
             // btnBorrar
             // 
@@ -138,17 +140,18 @@
             Controls.Add(label1);
             Controls.Add(txtMensaje);
             Controls.Add(txtTitulo);
-            Controls.Add(dataGridView1);
+            Controls.Add(dtGridTabla);
             Name = "Form1";
             Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Load += Form1_Load;
+            ((System.ComponentModel.ISupportInitialize)dtGridTabla).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dtGridTabla;
         private TextBox txtTitulo;
         private TextBox txtMensaje;
         private Label label1;
