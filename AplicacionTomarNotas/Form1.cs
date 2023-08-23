@@ -23,7 +23,7 @@ namespace AplicacionTomarNotas
 
             if (tituloNotaSeleccionada == txtTitulo.Text && mensajeNotaSeleccionada == txtMensaje.Text)
             {
-                
+
                 txtTitulo.Text = String.Empty;
 
                 txtMensaje.Text = String.Empty;
@@ -53,6 +53,10 @@ namespace AplicacionTomarNotas
             tabla.Columns.Add("Mensaje", typeof(String));
 
             dtGridTabla.DataSource = tabla;
+
+            dtGridTabla.Columns["Mensaje"].Visible = false;
+
+            dtGridTabla.Columns["Titulo"].Width = 250;
 
         }
 
